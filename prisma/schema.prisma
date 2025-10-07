@@ -4,7 +4,6 @@
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -31,9 +30,9 @@ model Vehicle {
 }
 
 model VehicleUsage {
-  id        String   @id
+  id        String    @id
   startDate DateTime
-  endDate   DateTime
+  endDate   DateTime?
   reason    String
   driverId  String
   vehicleId String

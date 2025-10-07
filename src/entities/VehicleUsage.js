@@ -1,14 +1,15 @@
+import { uuid } from "uuidv4"
+
 export class VehicleUsage {
 
-    constructor({startDate, endDate, reason, driverId, vehicleId, id}){
-        this.startDate = startDate
-        this.endDate = endDate
+    constructor({ reason, driverId, vehicleId, id}){
+        this.startDate = new Date()
         this.reason = reason
         this.driverId = driverId
         this.vehicleId = vehicleId
 
         if(!id){
-            this.id = id
+            this.id = uuid()
         }
     }
 }
