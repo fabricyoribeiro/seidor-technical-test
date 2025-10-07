@@ -15,7 +15,8 @@
   "dependencies": {
     "@prisma/client": "^6.16.3",
     "express": "^5.1.0",
-    "uuidv4": "^6.2.13"
+    "uuidv4": "^6.2.13",
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "nodemon": "^3.1.10",

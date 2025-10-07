@@ -1,6 +1,6 @@
 export class VehicleUsage {
 
-    constructor(startDate, endDate, reason, driverId, vehicleId, id){
+    constructor({startDate, endDate, reason, driverId, vehicleId, id}){
         this.startDate = startDate
         this.endDate = endDate
         this.reason = reason

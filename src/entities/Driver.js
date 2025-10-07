@@ -2,7 +2,7 @@ import { uuid } from "uuidv4";
 
 export class Driver {
 
-    constructor(name, id){
+    constructor({name, id}){
         this.name = name
 
         if(!id){
