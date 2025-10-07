@@ -81,7 +81,8 @@ export class PostgresVehiclesRepository {
           },
         },
       });
-
+      
+      console.log(filteredVehicles)
       return filteredVehicles;
     } catch (error) {
       throw new Error(`error while getting vehicles: ${error.message}`);
