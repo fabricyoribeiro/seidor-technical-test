@@ -13,7 +13,7 @@ export class DeleteDriverUseCase {
     const driverExists = await this.driversRepository.findById(id)
 
     if(!driverExists){
-      throw new Error("error while deleting driver. user does not exists");
+      throw new Error("error while deleting driver. driver does not exists");
     }
 
     await this.driversRepository.delete(id);

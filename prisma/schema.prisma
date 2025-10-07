@@ -23,7 +23,7 @@ model Driver {
 
 model Vehicle {
   id    String @id
-  plate String
+  plate String @unique
   color String
   brand String
 

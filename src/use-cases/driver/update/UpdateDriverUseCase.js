@@ -13,7 +13,7 @@ export class UpdateDriverUseCase {
     const driverExists = await this.driversRepository.findById(id)
 
     if(!driverExists){
-      throw new Error("error while updating driver. user does not exists");
+      throw new Error("error while updating driver. driver does not exists");
     }
 
     await this.driversRepository.update(id, data);

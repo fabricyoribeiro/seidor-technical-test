@@ -11,7 +11,7 @@ export class GetDriverByIdUseCase {
         const driverExists = await this.driversRepository.findById(id)
 
         if(!driverExists){
-            throw new Error('user does not exists')
+            throw new Error('driver does not exists')
         }
 
         return driverExists
