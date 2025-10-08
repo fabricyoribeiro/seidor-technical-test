@@ -1,6 +1,7 @@
 import {Router} from 'express'
 import { createVehicleUsageController } from '../use-cases/vehicle-usage/create/index.js'
 import { finishUsageController } from '../use-cases/vehicle-usage/finish-usage/index.js'
+import { getAllVehicleUsageController } from '../use-cases/vehicle-usage/get-all/index.js'
 
 const vehicleUsageRoutes = Router()
 
@@ -10,6 +11,10 @@ vehicleUsageRoutes.post('/', (request, reponse)=> {
 
 vehicleUsageRoutes.put('/finish-usage/:id', (request, reponse)=> {
     finishUsageController.handle(request, reponse)
+})
+
+vehicleUsageRoutes.get('/', (request, reponse)=> {
+    getAllVehicleUsageController.handle(request, reponse)
 })
 
 export {vehicleUsageRoutes}
