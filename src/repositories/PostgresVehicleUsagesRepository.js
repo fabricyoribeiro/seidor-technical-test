@@ -49,4 +49,23 @@ export class PostgresVehicleUsagesRepository {
     }
   }
 
+  async findVehicleInUseByDriver(id) {
+    try {
+      const vehicleUsage = await prisma.vehicleUsage.findFirst({
+        where: {
+          driverId: id,
+          endDate: null
+        },
+        include: {
+          driver: true,
+          vehicle: true
+        }
+      });
+      console.log(vehicleUsage)
+      return vehicleUsage;
+    } catch (error) {
+      throw new Error(`error while find vehicle usages: ${error.message}`);
+    }
+  }
+
 }

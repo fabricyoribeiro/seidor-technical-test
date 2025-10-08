@@ -7,12 +7,8 @@ export class CreateDriverUseCase {
     }
 
     async execute(data){
-        console.log(data)
         const driver = new Driver(data)
-
-
         const result = await this.driversRepository.save(driver)
         return result
-        
     }
 }
