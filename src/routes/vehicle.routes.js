@@ -28,7 +28,7 @@ vehicleRoutes.get('/filter-by-brand/:brand', (request, response) => {
     filterVehiclesByBrandController.handle(request, response)
 })
 
-vehicleRoutes.get('/', (request, response) => {
+vehicleRoutes.get('/all', (request, response) => {
     getAllVehiclesController.handle(request, response)
 })
 

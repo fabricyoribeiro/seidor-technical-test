@@ -13,7 +13,7 @@ vehicleUsageRoutes.put('/finish-usage/:id', (request, reponse)=> {
     finishUsageController.handle(request, reponse)
 })
 
-vehicleUsageRoutes.get('/', (request, reponse)=> {
+vehicleUsageRoutes.get('/all', (request, reponse)=> {
     getAllVehicleUsageController.handle(request, reponse)
 })
 
