@@ -21,7 +21,7 @@ export class PostgresVehicleUsagesRepository {
   }
 
 
-  async finishUsage(id, data) {
+  async finishUsage(id) {
     try {
       await prisma.vehicleUsage.update({
         where: { id },
@@ -61,7 +61,6 @@ export class PostgresVehicleUsagesRepository {
           vehicle: true
         }
       });
-      console.log(vehicleUsage)
       return vehicleUsage;
     } catch (error) {
       throw new Error(`error while find vehicle usages: ${error.message}`);

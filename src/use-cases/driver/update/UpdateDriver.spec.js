@@ -18,7 +18,7 @@ describe("update driver", () => {
     expect(mockRepository.update).toHaveBeenCalled();
   });
 
-  it("should throw an error if user does not exist", async () => {
+  it("should throw an error if driver does not exist", async () => {
     const mockRepository = {
       update: vi.fn(),
       findById: vi.fn().mockResolvedValue(null),
